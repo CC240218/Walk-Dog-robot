@@ -28,7 +28,7 @@ jobs:
       with: 
         python-version: 3.12
     - name: Install Deps
-      run: python -m install --upgrade pip
+      run: python -m pip install --upgrade pip
 
     - name: Browser init
       run: rfbrowser init
