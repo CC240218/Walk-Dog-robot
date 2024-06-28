@@ -36,4 +36,4 @@ jobs:
       run: rfbrowser init
 
     - name: Teste page
-      run: robot -d ./logs tests/home.robot
+      run: robot -d ./logs tests
