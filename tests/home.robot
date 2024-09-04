@@ -13,7 +13,7 @@ Checar home
     Start session 
 
     # keyword do documento 'home.resource', herdado pelo 'base.resource'
-    Deve verificar se a home está online
+    Deve verificar se a home está online    Cuidado e diversão em cada passo
 
     # Finalizando o browser pelo 'base.resource'
     Finish session
