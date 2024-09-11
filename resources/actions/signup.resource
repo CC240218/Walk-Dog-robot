@@ -16,8 +16,9 @@ go to signup page
     # Aguardando determinado elemento da pagina por segundos expecificados
     Wait For Elements State    form h1    visible    5000
 
+    [Arguments]    ${text}
     # Realizando um assert de comparação com o texto do elemento
-    Get Text    form h1    equal    Faça seu cadastro
+    Get Text    form h1    equal   ${text} 
 
 Fill signup form
 # Preenchimentos dos campos e busca do CEP

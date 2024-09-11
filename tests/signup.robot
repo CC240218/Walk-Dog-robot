@@ -12,7 +12,7 @@ Test Teardown     Finish session
 *** Test Cases ***
 deve realizar um cadastro
 # Preenchimento dos campos
-
+    [Tags]    cadastro
     # Dicionario comportando uma coleção de dados
     ${dog_walker}    Create Dictionary
     ...    name=Rafael
@@ -24,7 +24,7 @@ deve realizar um cadastro
     ...    cnh=toretto.jpg    
 
     # Caso de teste para acessar uma pagina (propriedade do signup.resource acessado atravez do base.resource)
-    go to signup page
+    go to signup page    Faça seu cadastro
 
     # Preenchimento dos campos (propriedade do signup.resource acessado atravez do base.resource)
     # Passando o dicionario por paramentro
@@ -48,7 +48,7 @@ Nao deve cadastrar com campos vazios
     [Tags]    required
 
     # Caso de teste para acessar uma pagina (propriedade do signup.resource acessado atravez do base.resource)
-    go to signup page
+    go to signup page    Faça seu cadastro
 
     # enviando o formulario (propriedade do signup.resource acessado atravez do base.resource)
     Submit signup form
@@ -82,7 +82,7 @@ deve realizar um cadastro com atividade extra de cuidador
     ...    adictional_service=Cuidar
 
     # Caso de teste para acessar uma pagina (propriedade do signup.resource acessado atravez do base.resource)
-    go to signup page
+    go to signup page    Faça seu cadastro
 
     # Preenchimento dos campos (propriedade do signup.resource acessado atravez do base.resource)
     # Passando o dicionario por paramentro
@@ -118,7 +118,7 @@ deve realizar um cadastro com atividade de adestrador
     ...    adictional_service=Adestrar
 
      # Caso de teste para acessar uma pagina (propriedade do signup.resource acessado atravez do base.resource)
-    go to signup page
+    go to signup page    Faça seu cadastro
 
     # Preenchimento dos campos (propriedade do signup.resource acessado atravez do base.resource)
     # Passando o dicionario por paramentro
@@ -158,6 +158,6 @@ deve validar se os dados foram digitados nos campos
     ...    addressDistrict=Jardim Brasil
     ...    addressCityUf=Olinda/PE
 
-    go to signup page
+    go to signup page    Faça seu cadastro
     Fill signup form     ${dog_walker}
     Asserts signup complete    ${conpare_input}
