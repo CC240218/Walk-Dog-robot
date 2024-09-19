@@ -5,6 +5,7 @@ Documentation        Suite de teste de cadastro
                 # Rota do documento principal para herdar as propriedades do base.resources
 Resource    ../resources/base.resource
 
+
                 # Iniciando e finalizando automaticamente cada caso de teste (base.resources)
 Test Setup        Start session
 Test Teardown     Finish session
@@ -14,21 +15,21 @@ deve realizar um cadastro
 # Preenchimento dos campos
     [Tags]    cadastro
     # Dicionario comportando uma coleção de dados
+  
     ${dog_walker}    Create Dictionary
-    ...    name=Rafael
+    ...    name=Tester
     ...    email=teste@teste.com
     ...    cpf=10749688408
     ...    cep=53230670
     ...    addressNumber=136
     ...    addressDetails=apt 202
     ...    cnh=toretto.jpg    
-
     # Caso de teste para acessar uma pagina (propriedade do signup.resource acessado atravez do base.resource)
     go to signup page    Faça seu cadastro
 
     # Preenchimento dos campos (propriedade do signup.resource acessado atravez do base.resource)
     # Passando o dicionario por paramentro
-    Fill signup form     ${dog_walker}
+    Fill signup form    ${dog_walker}
 
     # enviando o formulario (propriedade do signup.resource acessado atravez do base.resource)
     Submit signup form

@@ -24,25 +24,25 @@ Fill signup form
 # Preenchimentos dos campos e busca do CEP
 
     # Este argumeto é um dicionario Python, criado no 'signup.robot' para conter várias informações em uma variavel
-    [Arguments]    ${dog_walker}
+    [Arguments]    ${data}
 
     # Preenchendo os campos atravez do '[Arguments]  ${dog_walker}' passando o dado de acordo com o input
-    Fill Text    css=input[name=name]    ${dog_walker}[name]
-    Fill Text    css=input[name=email]   ${dog_walker}[email]
-    Fill Text    css=input[name=cpf]    ${dog_walker}[cpf]
-    Fill Text    css=input[name=cep]    ${dog_walker}[cep]
+    Fill Text    css=input[name=name]    ${data}[name]
+    Fill Text    css=input[name=email]   ${data}[email]
+    Fill Text    css=input[name=cpf]    ${data}[cpf]
+    Fill Text    css=input[name=cep]    ${data}[cep]
 
     # Clicando em um botão e solicitando um aguardo de 3 segundos
     Click        css=input[type=button][value="Buscar CEP"]
     Sleep    3
 
     # Preenchendo os campos atravez do '[Arguments]  ${dog_walker}' passando o dado de acordo com o input
-    Fill Text    css=input[name=addressNumber]    ${dog_walker}[addressNumber]
-    Fill Text    css=input[name=addressDetails]    ${dog_walker}[addressDetails]
+    Fill Text    css=input[name=addressNumber]    ${data}[addressNumber]
+    Fill Text    css=input[name=addressDetails]    ${data}[addressDetails]
     
     # click e upload de um arquivo    atravez do EXECDIR, que serve para resumir o caminho 'Raiz' do projeto, 
     # concatenado com o caminho do arquivo dentro do projeto
-    Upload File By Selector    css=input[type=file]   ${EXECDIR}/resources/fixtures/${dog_walker}[cnh]
+    Upload File By Selector    css=input[type=file]   ${EXECDIR}/resources/fixtures/${data}[cnh]
 
 Adictional service
 # Atividades não obrigatorias
